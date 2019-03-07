@@ -1,4 +1,4 @@
-#Author: Pratik Mistry
+#Author: Kavin Muralitharan & Pratik Mistry
 #Date: March 31, 2016
 #Purpose: To make a domino class program using OOP
 #=============================================================
@@ -9,7 +9,7 @@ from tkinter import*
 
 #Classes
 
-#Author: Pratik Mistry
+#Author: Kavin Muralitharan
 #Date: March 31, 2016
 #Purpose: To define a domino.
 #Data Elements:
@@ -29,7 +29,7 @@ from tkinter import*
 # drawDots - draws the dots on the domino
 
 class Domino:
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: Sets values to various objects
     # Parameters: value,orientation,faceUp
@@ -48,7 +48,7 @@ class Domino:
         self.faceUp = faceUp
 
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: Return Value of domino as string
     # Parameters: None
@@ -57,7 +57,7 @@ class Domino:
     def __str__(self):
         self.value = str(value)
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: To get the value of the domino
     # Parameters: None
@@ -68,7 +68,7 @@ class Domino:
         value2 = getPositiveInteger()
         self.value = int(str(value1)+str(value2))
         
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: To set the value
     # Parameters: none
@@ -79,7 +79,7 @@ class Domino:
             value = self.value 
         else:
             value = 1
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: To flip the domino
     # Parameters: none
@@ -89,7 +89,7 @@ class Domino:
         flipped = str(self.value)[::-1]
         self.value = int(flipped)
             
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: To set the orientation of the domino
     # Parameters: none  
@@ -101,7 +101,7 @@ class Domino:
         else:
             orientation = 'H'
             
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose:  To set the size of the domino
     # Parameters: none
@@ -111,7 +111,7 @@ class Domino:
         if size >= 50 or size <=80:
             self.size = int(var.get())
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: To randomize the values
     # Parameters: none
@@ -120,7 +120,7 @@ class Domino:
     def randomize(self):
         self.value = int(str(random.randrange(0,7)) + str(random.randrange(0,7)))
         
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: To draw the rectangle of the domino
     # Parameters: canvas,x,y
@@ -140,7 +140,7 @@ class Domino:
             self.drawDots(self.value % 10,x, y+self.size)
 
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: To draw the dots according to the value
     # Parameters: value,x,y 
@@ -205,7 +205,7 @@ class Domino:
                     self.dotSix = canvas.create_oval(x + self.gap * 2 + self.diameter, y + self.size - self.gap, x + self.gap * 2 + self.diameter * 2, y + self.size - self.gap - self.diameter, fill = "white", outline = "white")
                     self.dotSeven = canvas.create_oval(x + self.gap * 3 + self.diameter * 2, y + self.size - self.gap, x + self.gap * 3 + self.diameter * 3, y + self.size - self.gap - self.diameter, fill = "white", outline = "white")
     
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To add two objects
     # Parameters: given radical (x)
@@ -218,7 +218,7 @@ class Domino:
             x.flip()
         return "Sum:"+str(x.value + self.value)
     
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To subtract two objects
     # Parameters: given radical (x)
@@ -231,7 +231,7 @@ class Domino:
             x.flip()
         return "Difference:"+ str(x.value - self.value)
     
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To multiply two objects
     # Parameters: given radical (x)
@@ -244,7 +244,7 @@ class Domino:
             x.flip()
         return "Product:"+str(x.value * self.value)
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To return if x > value
     # Parameters: given radical (x)
@@ -258,7 +258,7 @@ class Domino:
         return ">" + str(x.value > self.value)
         
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To determine if x < value
     # Parameters: given radical (x)
@@ -271,7 +271,7 @@ class Domino:
             x.flip()
         return "<" + str(x.value < self.value)
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To determine if x >= value
     # Parameters: given radical (x)
@@ -284,7 +284,7 @@ class Domino:
             x.flip()
         return ">=" + str(x.value >= self.value)
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To determine if x <= value
     # Parameters: given radical (x)
@@ -297,7 +297,7 @@ class Domino:
             x.flip()
         return "<=" + str(x.value <= self.value)
     
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To determine if x equal to value 
     # Parameters: given radical (x)
@@ -310,7 +310,7 @@ class Domino:
             x.flip()
         return "=" + str(x.value == self.value)
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To determine if x does not equal value
     # Parameters: given radical (x)
@@ -323,7 +323,7 @@ class Domino:
             x.flip()
         return "!=" + str(x.value != self.value)
         
-#Author: Pratik Mistry
+#Author: Kavin Muralitharan & Pratik Mistry
 #Date: April 12, 2016
 #Purpose: To define a hand.
 #Data Elements:
@@ -338,7 +338,7 @@ class Domino:
 
 
 class Hand:
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: Sets values to various objects
     # Parameters: domino1,domino2,domino3,size
@@ -354,7 +354,7 @@ class Hand:
         self.domino3 = domino3
 
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: March 8, 2016
     # Purpose: Return Value of domino as string
     # Parameters: None
@@ -364,7 +364,7 @@ class Hand:
         handValue = str(self.domino1) + "-" + str(self.domino2) + str(self.domino3)
         return handValue
     
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 12, 2016
     # Purpose: Sorts dominos in ascending order
     # Parameters: none
@@ -387,7 +387,7 @@ class Hand:
         self.domino3.value = big
 
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 12, 2016
     # Purpose: randomizes the dominos in the hand
     # Parameters: none
@@ -398,7 +398,7 @@ class Hand:
         self.domino2.randomize()
         self.domino3.randomize()
         
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 12, 2016
     # Purpose: to draw dominos on the canvas
     # Parameters: none
@@ -409,7 +409,7 @@ class Hand:
         self.domino2.draw(canvas,205,20)
         self.domino3.draw(canvas,390,20)
         
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 12, 2016
     # Purpose: determines the largest run of the hand
     # Parameters: n/a
@@ -498,7 +498,7 @@ class Hand:
                 
         return run
         
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To return if x > value
     # Parameters: given radical (x)
@@ -510,7 +510,7 @@ class Hand:
         return  ">"+str(b > a)
         
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To determine if x < value
     # Parameters: given radical (x)
@@ -521,7 +521,7 @@ class Hand:
         b = x.domino1.value + x.domino2.value + x.domino3.value
         return  "<"+str(b < a)
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To determine if x >= value
     # Parameters: given radical (x)
@@ -532,7 +532,7 @@ class Hand:
         b = x.domino1.value + x.domino2.value + x.domino3.value
         return ">="+ str(b >= a)
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To determine if x <= value
     # Parameters: given radical (x)
@@ -543,7 +543,7 @@ class Hand:
         b = x.domino1.value + x.domino2.value + x.domino3.value
         return "<="+ str(b <= a)
     
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To determine if x equal to value 
     # Parameters: given radical (x)
@@ -554,7 +554,7 @@ class Hand:
         b = x.domino1.value + x.domino2.value + x.domino3.value
         return "="+str(b == a)
 
-    # Author: Pratik Mistry
+    # Author: Kavin Muralitharan & Pratik Mistry
     # Date: April 25, 2016
     # Purpose: To determine if x does not equal value
     # Parameters: given radical (x)
@@ -568,7 +568,7 @@ class Hand:
     
 #SUBS
 
-# Author: Pratik Mistry
+# Author: Kavin Muralitharan & Pratik Mistry
 # Date: March 2, 2016
 # Purpose: To get Positive integer
 # Parameters: intLow, intHigh
@@ -589,7 +589,7 @@ def getPositiveInteger (intLow = 1, intHigh = 6):
             print("Your Number is invalid! You cannot enter a value with a digit greater than 6.")
     return intNumber
 
-# Author: Pratik Mistry
+# Author: Kavin Muralitharan & Pratik Mistry
 # Date: April 25, 2016
 # Purpose: To display the hand of a domino
 # Parameters: none
@@ -615,7 +615,7 @@ def display():
     runLabel = Label(root,text=run,font = ("calibri",26,"bold"),fg= "black",bg="gainsboro")
     runLabel.place(x=355,y=350)
 
-# Author: Pratik Mistry
+# Author: Kavin Muralitharan & Pratik Mistry
 # Date: March 8, 2016
 # Purpose: To bind a key
 # Parameters: event
@@ -770,7 +770,7 @@ mainloop()
 
 #Classes
 
-#Author: Pratik Mistry
+#Author: Kavin Muralitharan & Pratik Mistry
 #Date: June 6, 2016
 #Purpose: To create a domino game
 #Data Elements:
